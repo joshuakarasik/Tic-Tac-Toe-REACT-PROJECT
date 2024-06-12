@@ -6,7 +6,6 @@ import Log from "./Log.jsx";
 
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
-
   const [activePlayer, setActivePlayer] = useState("X");
 
   function handleSelectSquare(rowIndex, colIndex) {
@@ -44,7 +43,7 @@ function App() {
         </ol>
         <GameBoard
           onSelectSquare={handleSelectSquare}
-          activePlayerSymbol={activePlayer}
+          turns={gameTurns}
         />
       </div>
       <Log />
