@@ -3,6 +3,7 @@ import { useState } from "react";
 import Player from "./components/Player.jsx";
 import GameBoard from "./components/GameBoard.jsx";
 import Log from "./Log.jsx";
+import { WINNING_COMBINATIONS } from "./winning-combinations.js";
 
 function deriveActivePlayer(gameTurns) {
   let currentPlayer = "X";
@@ -16,6 +17,7 @@ function deriveActivePlayer(gameTurns) {
 
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
+  CONST[(hasWinner, setHasWinner)] = useState(false);
   // const [activePlayer, setActivePlayer] = useState("X");
 
   const activePlayer = deriveActivePlayer(gameTurns);
